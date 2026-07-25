@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ */
+/*  Design tokens — semantic colors resolve differently per theme.     */
+/*  Values are space-separated RGB channels so Tailwind's <alpha-value> */
+/*  modifier works (e.g. bg-surface/60).                               */
+/* ------------------------------------------------------------------ */
+@layer base {
+  :root,
+  .dark {
+    /* Elevated slate (default / showcase) — lighter & warmer than pure ink,
+       brighter text, higher contrast. Still moody, far less heavy. */
+    --ink: 27 31 39; /* #1b1f27 page background */
+    --ink-soft: 33 38 47; /* #21262f */
+    --ink-muted: 40 46 57; /* #282e39 */
+
+    --surface: 45 51 63; /* #2d333f glass card base — sits above the page */
+    --surface-raised: 56 63 77; /* #383f4d */
+    --surface-sunken: 35 40 50; /* #232832 */
+
+    --line: 165 177 196; /* hairline borders / dividers */
+
+    --content: 244 246 250; /* primary text — bright, high contrast */
+    --content-soft: 206 213 224;
+    --content-muted: 156 166 181;
+
+    color-scheme: dark;
+  }
+
+  .light {
+    /* Warm daylight retreat */
+    --ink: 245 243 238;
+    --ink-soft: 250 248 244;
+    --ink-muted: 255 255 255;
+
+    --surface: 255 255 255;
+    --surface-raised: 255 255 255;
+    --surface-sunken: 240 237 231;
+
+    --line: 71 85 105;
+
+    --content: 32 34 40;
+    --content-soft: 74 80 92;
+    --content-muted: 120 128 140;
+
+    color-scheme: light;
+  }
+
+  * {
+    border-color: rgb(var(--line) / 0.1);
+  }
+
+  html {
+    /* Bumped root size — scales the whole rem-based type & spacing up a notch. */
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      font-size: 18px;
+    }
+  }
+
+  body {
+    @apply bg-ink text-content font-sans antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+    min-height: 100vh;
+  }
+
+  /* Atmospheric page backdrop — soft aurora glow behind everything. */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: theme('backgroundImage.aurora');
+    opacity: 0.9;
+  }
+
+  .light body::before {
+    opacity: 0.5;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+  }
+
+  ::selection {
+    background: rgb(217 166 72 / 0.28);
+  }
+
+  /* Slim, themed scrollbars */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--line) / 0.18);
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--line) / 0.32);
+    background-clip: content-box;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Reusable component classes                                         */
+/* ------------------------------------------------------------------ */
+@layer components {
+  /* Frosted card. NOTE: intentionally NO backdrop-blur here — cards animate in
+     and scroll, and per-frame backdrop-filter rasterization is the #1 cause of
+     jank. We fake the frosted look with a more opaque surface + hairline + glow.
+     Blur is reserved for sticky chrome / overlays that don't animate per frame. */
+  .glass {
+    @apply relative rounded-2xl border border-line/10 bg-surface/85 shadow-glass;
+  }
+
+  .glass-hover {
+    @apply transition-[border-color,box-shadow] duration-300 hover:border-line/20 hover:shadow-glass-hover;
+  }
+
+  /* Inner top-edge highlight to sell the glass look. */
+  .glass::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(
+      180deg,
+      rgb(255 255 255 / 0.05) 0%,
+      transparent 18%,
+      transparent 100%
+    );
+  }
+
+  .btn-focus {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-gold-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-ink;
+  }
+
+  /* Shimmer skeleton block */
+  .skeleton {
+    @apply relative overflow-hidden rounded-lg bg-surface-raised/60;
+  }
+  .skeleton::after {
+    content: '';
+    @apply absolute inset-0 -translate-x-full animate-shimmer;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgb(var(--line) / 0.1),
+      transparent
+    );
+  }
+
+  /* Gold gradient text for hero numbers / accents */
+  .text-gradient-gold {
+    @apply bg-gradient-to-br from-gold-200 via-gold-300 to-gold-500 bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
