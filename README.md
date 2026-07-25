@@ -4,6 +4,8 @@
 
 Lumen Retreat is a boutique resort management dashboard with a midnight-luxury aesthetic and hand-built 3D scenes. Manage cabins, bookings and guests through glassmorphic UI, animated charts and procedurally-generated low-poly cabins you can orbit in real time — no external 3D model files, every polygon written in code.
 
+## [Go to WebApp 🌲](https://lumen-retreat.vercel.app/login)
+
 ---
 
 ## ✨ Features
@@ -127,7 +129,7 @@ The app ships with a pre-seeded demo account — the login fields are **already 
 | Email    | `admin@gmail.com` |
 | Password | `adminpass`       |
 
-> All data lives in memory, seeded from `src/data/seed.json` with ~50 bookings generated around *today* so the charts always look alive. Create, edit and delete freely — a refresh restores the original retreat.
+> All data lives in memory, seeded from `src/data/seed.json` with ~50 bookings generated around _today_ so the charts always look alive. Create, edit and delete freely — a refresh restores the original retreat.
 
 ---
 
