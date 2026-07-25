@@ -1,0 +1,53 @@
+{
+  "settings": {
+    "id": 1,
+    "min_booking_length": 2,
+    "max_booking_length": 90,
+    "max_guests_per_booking": 8,
+    "breakfast_price": 22
+  },
+  "cabins": [
+    { "id": "c01", "name": "Aurora", "category": "luxury", "max_capacity": 2, "regular_price": 620, "discount": 60, "image": null, "description": "A glass-walled hideaway perched above the treeline. Wake to first light spilling across the valley, then soak in the private cedar tub under the stars." },
+    { "id": "c02", "name": "Ember", "category": "deluxe", "max_capacity": 4, "regular_price": 420, "discount": 40, "image": null, "description": "Warm timber and a stone fireplace at its heart. Ember sleeps a family of four with a sun-drenched loft and a fire-lit deck." },
+    { "id": "c03", "name": "Fjord", "category": "luxury", "max_capacity": 2, "regular_price": 680, "discount": 0, "image": null, "description": "Minimalist Nordic calm on the water's edge. Floor-to-ceiling glass, a floating dock, and total, restorative silence." },
+    { "id": "c04", "name": "Willow", "category": "standard", "max_capacity": 2, "regular_price": 240, "discount": 20, "image": null, "description": "An intimate cabin tucked among the willows. Simple, serene, and perfect for a slow weekend for two." },
+    { "id": "c05", "name": "Cedar", "category": "deluxe", "max_capacity": 4, "regular_price": 400, "discount": 0, "image": null, "description": "Handcrafted from local cedar with a wraparound deck and an outdoor shower open to the forest canopy." },
+    { "id": "c06", "name": "Lumen", "category": "luxury", "max_capacity": 6, "regular_price": 940, "discount": 90, "image": null, "description": "Our flagship. A six-guest sanctuary with a heated infinity edge, private sauna, and a skylit primary suite." },
+    { "id": "c07", "name": "Moss", "category": "standard", "max_capacity": 3, "regular_price": 280, "discount": 30, "image": null, "description": "Grounded and green. A snug retreat with a reading nook, wood stove, and trails from the doorstep." },
+    { "id": "c08", "name": "Pine", "category": "standard", "max_capacity": 2, "regular_price": 220, "discount": 0, "image": null, "description": "Clean lines and pine-scented air. The essential Lumen escape for two, right by the lake path." },
+    { "id": "c09", "name": "Solace", "category": "deluxe", "max_capacity": 5, "regular_price": 480, "discount": 50, "image": null, "description": "Room to breathe. Five guests, a chef's kitchen, and a lantern-lit courtyard for long evenings." },
+    { "id": "c10", "name": "Vista", "category": "luxury", "max_capacity": 4, "regular_price": 720, "discount": 70, "image": null, "description": "The highest cabin on the ridge with 270 degree views. Panoramic glass, a telescope, and a hot tub facing the peaks." }
+  ],
+  "guests": [
+    { "id": "g01", "full_name": "Amelia Hartley", "email": "amelia.hartley@example.com", "nationality": "United Kingdom", "country_flag": "🇬🇧", "national_id": "GB4521907" },
+    { "id": "g02", "full_name": "Noah Bennett", "email": "noah.bennett@example.com", "nationality": "United States", "country_flag": "🇺🇸", "national_id": "US8830142" },
+    { "id": "g03", "full_name": "Sofia Marchetti", "email": "sofia.marchetti@example.com", "nationality": "Italy", "country_flag": "🇮🇹", "national_id": "IT2290815" },
+    { "id": "g04", "full_name": "Liam O'Sullivan", "email": "liam.osullivan@example.com", "nationality": "Ireland", "country_flag": "🇮🇪", "national_id": "IE1120983" },
+    { "id": "g05", "full_name": "Yuki Tanaka", "email": "yuki.tanaka@example.com", "nationality": "Japan", "country_flag": "🇯🇵", "national_id": "JP7743021" },
+    { "id": "g06", "full_name": "Isabella Costa", "email": "isabella.costa@example.com", "nationality": "Portugal", "country_flag": "🇵🇹", "national_id": "PT5510238" },
+    { "id": "g07", "full_name": "Lucas Müller", "email": "lucas.muller@example.com", "nationality": "Germany", "country_flag": "🇩🇪", "national_id": "DE9021774" },
+    { "id": "g08", "full_name": "Emma Larsen", "email": "emma.larsen@example.com", "nationality": "Denmark", "country_flag": "🇩🇰", "national_id": "DK3348120" },
+    { "id": "g09", "full_name": "Mateo Fernández", "email": "mateo.fernandez@example.com", "nationality": "Spain", "country_flag": "🇪🇸", "national_id": "ES6612390" },
+    { "id": "g10", "full_name": "Chloé Dubois", "email": "chloe.dubois@example.com", "nationality": "France", "country_flag": "🇫🇷", "national_id": "FR7789012" },
+    { "id": "g11", "full_name": "Oliver Novak", "email": "oliver.novak@example.com", "nationality": "Czechia", "country_flag": "🇨🇿", "national_id": "CZ4402318" },
+    { "id": "g12", "full_name": "Aria Nguyen", "email": "aria.nguyen@example.com", "nationality": "Vietnam", "country_flag": "🇻🇳", "national_id": "VN9930211" },
+    { "id": "g13", "full_name": "Ethan Walsh", "email": "ethan.walsh@example.com", "nationality": "Australia", "country_flag": "🇦🇺", "national_id": "AU1207765" },
+    { "id": "g14", "full_name": "Maya Kapoor", "email": "maya.kapoor@example.com", "nationality": "India", "country_flag": "🇮🇳", "national_id": "IN5590183" },
+    { "id": "g15", "full_name": "Henrik Berg", "email": "henrik.berg@example.com", "nationality": "Norway", "country_flag": "🇳🇴", "national_id": "NO8814402" },
+    { "id": "g16", "full_name": "Camila Rossi", "email": "camila.rossi@example.com", "nationality": "Brazil", "country_flag": "🇧🇷", "national_id": "BR3320991" },
+    { "id": "g17", "full_name": "Daniel Kim", "email": "daniel.kim@example.com", "nationality": "South Korea", "country_flag": "🇰🇷", "national_id": "KR7701238" },
+    { "id": "g18", "full_name": "Freya Andersson", "email": "freya.andersson@example.com", "nationality": "Sweden", "country_flag": "🇸🇪", "national_id": "SE2219804" },
+    { "id": "g19", "full_name": "Gabriel Silva", "email": "gabriel.silva@example.com", "nationality": "Brazil", "country_flag": "🇧🇷", "national_id": "BR9982017" },
+    { "id": "g20", "full_name": "Hannah Schmidt", "email": "hannah.schmidt@example.com", "nationality": "Germany", "country_flag": "🇩🇪", "national_id": "DE1120394" },
+    { "id": "g21", "full_name": "Ivan Petrov", "email": "ivan.petrov@example.com", "nationality": "Bulgaria", "country_flag": "🇧🇬", "national_id": "BG4471209" },
+    { "id": "g22", "full_name": "Julia Kowalski", "email": "julia.kowalski@example.com", "nationality": "Poland", "country_flag": "🇵🇱", "national_id": "PL8830127" },
+    { "id": "g23", "full_name": "Kai Andersen", "email": "kai.andersen@example.com", "nationality": "Netherlands", "country_flag": "🇳🇱", "national_id": "NL2201983" },
+    { "id": "g24", "full_name": "Layla Haddad", "email": "layla.haddad@example.com", "nationality": "Lebanon", "country_flag": "🇱🇧", "national_id": "LB5590221" },
+    { "id": "g25", "full_name": "Marco Bianchi", "email": "marco.bianchi@example.com", "nationality": "Italy", "country_flag": "🇮🇹", "national_id": "IT7712098" },
+    { "id": "g26", "full_name": "Nina Volkova", "email": "nina.volkova@example.com", "nationality": "Russia", "country_flag": "🇷🇺", "national_id": "RU3390182" },
+    { "id": "g27", "full_name": "Omar Farouk", "email": "omar.farouk@example.com", "nationality": "Egypt", "country_flag": "🇪🇬", "national_id": "EG8801273" },
+    { "id": "g28", "full_name": "Priya Sharma", "email": "priya.sharma@example.com", "nationality": "India", "country_flag": "🇮🇳", "national_id": "IN2219087" },
+    { "id": "g29", "full_name": "Ryan Murphy", "email": "ryan.murphy@example.com", "nationality": "Canada", "country_flag": "🇨🇦", "national_id": "CA5578012" },
+    { "id": "g30", "full_name": "Sara Johansson", "email": "sara.johansson@example.com", "nationality": "Sweden", "country_flag": "🇸🇪", "national_id": "SE9902184" }
+  ]
+}
